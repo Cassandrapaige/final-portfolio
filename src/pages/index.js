@@ -1,22 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
+import {graphql} from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
+import Layout from "../components/layout/layout.component"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+import Title from "../components/title/title.component"
+import SocialLinks from "../components/social-links/social-links.component"
+import AboutSection from "../components/about-section/about-section.component"
+import ProjectsContainer from "../components/projects-container/projects-container.component"
+import Text from "../components/text/text.component"
 
-export default IndexPage
+export default ({ data, location }) => {
+  return (
+    <Layout>
+    <SEO title="Home" />
+      <Title isLarge isPurple text = "<CassieRossall>"/>
+          <Text>
+            Hey! I'm a self-taught Web Developer currently looking for life changing opportunities in Canada or abroad. 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio perspiciatis repudiandae omnis molestiae explicabo voluptas deleniti ullam fugit odio.
+          </Text>
+        <SocialLinks />
+        <AboutSection />
+        <ProjectsContainer data = {data}/>
+        <SocialLinks/>
+      <Title isLarge isPurple text = "</CassieRossall>"/>
+  </Layout>
+)}
+
+export const query = graphql`
+  query {
+    allMdx(sort: {fields: [frontmatter___date], order: DESC}){
+      edges {
+        node {
+          frontmatter {
+            date
+            description
+            title
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  } 
+`
