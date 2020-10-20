@@ -11,7 +11,10 @@ export const Form = styled.form`
 display: flex;
 flex-direction: column;
 
-    input, textarea {
+    input[type="text"], input[type="email"], textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         padding: 12px 10px;
         line-height: 100%;
         border: 1px solid ${colors.secondary};
@@ -19,6 +22,8 @@ flex-direction: column;
         max-width: 100%;
         background: ${colors.light};
         outline: none;
+        box-shadow: none;
+        border-radius: 0;
 
         &:focus {
             outline: 3px dotted ${colors.primary};

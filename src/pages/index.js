@@ -16,8 +16,7 @@ export default ({ data, location }) => {
     <SEO title="Home" />
       <Title isLarge isPurple text = "<CassieRossall>"/>
           <Text>
-            Hey! I'm a self-taught Web Developer currently looking for life changing opportunities in Canada or abroad. 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio perspiciatis repudiandae omnis molestiae explicabo voluptas deleniti ullam fugit odio.
+            Hi! I'm a self-taught Web Developer currently looking for life-changing opportunities in Canada or abroad.
           </Text>
         <SocialLinks />
         <AboutSection />

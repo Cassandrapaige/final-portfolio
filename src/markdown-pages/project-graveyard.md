@@ -6,7 +6,7 @@ overview: "ABCs of CSS is a React Application meant to inspire new developers to
 website: "https://abcsofcss.netlify.app/"
 github: "https://github.com/Cassandrapaige/abcsofcss"
 featuredImage: "./images/movies.png"
-stack: ["ReactJs", "Gatsby", "GraphQl", "Javascript/ES6", "API", "CSS/SCSS", "Styled Components"]
+stack: ["ReactJs", "Gatsby", "GraphQl", "Javascript/ES6", "API", "CSS/SCSS", "Styled Components", "React Native"]
 ---
 
 Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.

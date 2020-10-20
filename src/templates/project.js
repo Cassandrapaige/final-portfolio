@@ -42,12 +42,19 @@ export default ({ data, pageContext }) => {
                 <Title isLarge text = {post.frontmatter.title}/>
                 <Text>  {post.frontmatter.overview} </Text>
                 <div style= {{display: `flex`, margin: `30px 0 50px 0`}}>
-                    <CustomButton iscta = "true" withmargin = "true" href = {post.frontmatter.website}>
+                    <CustomButton 
+                        iscta = "true" 
+                        withmargin = "true" 
+                        href = {post.frontmatter.website} 
+                        target = "_blank">
                         <FontAwesomeIcon icon={faLaptopCode} width="0"/>
                         <span style= {{paddingLeft: `5px`}}>Live Site</span>
                     </CustomButton>
 
-                    <CustomButton withmargin = "true" href = {post.frontmatter.github}>
+                    <CustomButton 
+                        withmargin = "true" 
+                        href = {post.frontmatter.github} 
+                        target = "_blank">
                         <FontAwesomeIcon icon={faCode} width="0"/>
                         <span style= {{paddingLeft: `5px`}}>Github</span>
                     </CustomButton>

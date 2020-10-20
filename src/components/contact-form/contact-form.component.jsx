@@ -15,8 +15,10 @@ const ContactForm = ({history}) => {
     const textInput = createRef();
 
     const handleChange = () => {
-        setIsChecked(!isChecked);
-        if(isChecked) navigate(`/`);
+        if(!isChecked) {
+            return setIsChecked(!isChecked);
+        }
+        return navigate(`/`);
     }
 
     useEffect(() => {
