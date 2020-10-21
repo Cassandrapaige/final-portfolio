@@ -11,9 +11,9 @@ height: 0px;
 width: 0px;
 background: ${colors.light};
 z-index: 10;
-padding-top: 85px;
 opacity: 0;
 overflow: scroll;
+padding: 100px 50px;
 
 ${({onscreen})=> onscreen && css`
 opacity: 1;
@@ -21,27 +21,21 @@ min-height: 100vh;
 height: 100%;
 width: 100vw;
 `}
+
+@media(max-width: 500px) {
+    padding: 100px 20px;
+}
 `
 
-export const LinkItem = styled.div`
-background: ${colors.primary};
-border: 1px solid ${colors.dark};
-box-shadow: 2px 2px ${colors.dark};
-margin: 20px;
-display: flex;
-flex-direction: column;
-padding: 12px;
-transition: all .5s ease-in-out;
-transform: translateX(250px);
+export const LinkContainer = styled.div`
+margin: 10px 0;
+transition: all .5s ease;
+transform: translateY(60px);
 opacity: 0;
 
-${({onscreen}) => onscreen && css`
-    transition-delay: ${({interval}) => `${interval / 6}s`};
-    transform: translateX(0px);
-    opacity: 1;
-`}
-
-&:nth-of-type(even) {
-    background: ${colors.secondary};  
-}
+    ${({onscreen}) => onscreen && css`
+        transform: translateY(0px);
+        opacity: 1;
+        transition-delay: ${({interval}) => `${interval / 5}s`};
+    `}
 `

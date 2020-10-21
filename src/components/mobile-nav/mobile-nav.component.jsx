@@ -1,7 +1,10 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
-import {MobileNavigationMenu, LinkItem} from './mobile-nav.styles'
+import {MobileNavigationMenu, LinkContainer} from './mobile-nav.styles'
+
+import {CustomButton, ButtonWithArrow} from '../custom-button/custom-button.component'
+import SocialLinks from '../social-links/social-links.component'
 
 const MobileNav = ({...rest}) => {
     const data = useStaticQuery(graphql`
@@ -12,6 +15,9 @@ const MobileNav = ({...rest}) => {
               frontmatter {
                 title
               }
+              fields {
+                  slug
+              }
             }
           }
         }
@@ -19,24 +25,21 @@ const MobileNav = ({...rest}) => {
     `)
     return (
         <MobileNavigationMenu {...rest}>
-            <LinkItem interval = '0' {...rest}>
-                <h4>Get in touch!
-                    <span style= {{fontSize: `.9em`, fontWeight: `500`, display: `block`, paddingTop: `5px`}}> 
-                        Contact
-                    </span>
-                </h4>
-            </LinkItem>
+            <LinkContainer interval = "0" {...rest}>
+                <CustomButton iscta = "true" href = "/contact">Contact</CustomButton>
+            </LinkContainer>
             {
                 data.allMdx.edges.map(({node}, index) => (
-                    <LinkItem interval = {index + 1} {...rest}>
-                        <h4>{node.frontmatter.title}
-                            <span style= {{fontSize: `.9em`, fontWeight: `500`, display: `block`, paddingTop: `5px`}}> 
-                                Project
-                            </span>
-                        </h4>
-                    </LinkItem>
+                    <LinkContainer interval = {index + 1} {...rest}>
+                        <CustomButton href = {node.fields.slug}>
+                            {node.frontmatter.title} | Project
+                        </CustomButton>
+                    </LinkContainer>
                 ))
             }
+            <LinkContainer interval = "7" {...rest}>
+                <SocialLinks />
+            </LinkContainer>
         </MobileNavigationMenu>
     )
 }
