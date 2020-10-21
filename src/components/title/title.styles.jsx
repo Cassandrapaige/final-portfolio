@@ -4,7 +4,7 @@ import colors from '../../config/colors'
 export const TitleContainer = styled.h2`
 padding: 20px 0;
 color: transparent;
-font-size: ${({isLarge}) => isLarge ? '80px' : '50px'};
+font-size: ${({isLarge}) => isLarge ? '75px' : '50px'};
 text-shadow: ${({isPurple}) => isPurple ? `2px 2px ${colors.primary}` : `2px 2px ${colors.secondary}`};
 -webkit-text-stroke: 1px ${colors.dark};
 font-weight: 900;

@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 
 import Layout from "../components/layout/layout.component"
 import SEO from "../components/seo"
+import Image from "../components/image"
 
 import Title from "../components/title/title.component"
 import SocialLinks from "../components/social-links/social-links.component"
@@ -16,7 +17,7 @@ export default ({ data, location }) => {
     <SEO title="Home" />
       <Title isLarge isPurple text = "<CassieRossall>"/>
           <Text>
-            Hi! I'm a self-taught Web Developer currently looking for life-changing opportunities in Canada or abroad.
+            Hi! I'm a self-taught Web Developer currently looking for life-changing opportunities in Canada or abroad. 
           </Text>
         <SocialLinks />
         <AboutSection />

@@ -20,7 +20,6 @@ height: 100%;
     }
   }
 
-
   @media(max-width: 700px) {
     grid-template-columns: 1fr;
   }

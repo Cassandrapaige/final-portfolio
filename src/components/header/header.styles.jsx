@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Link} from 'gatsby'
 import colors from '../../config/colors'
 
@@ -13,6 +13,9 @@ top: 0;
 z-index: 100;
 padding: 0px 40px;
 
+${({isOpen}) => isOpen && css`
+transform: translateY(0px);
+`}
     .cta {
         animation: .6s fly ease;
     }

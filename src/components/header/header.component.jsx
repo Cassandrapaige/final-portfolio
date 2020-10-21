@@ -32,7 +32,8 @@ const Header = ({isActive, ...rest}) => {
 `)
 
   return( 
-    <HeaderContainer {...rest}>
+    <>
+    <HeaderContainer isOpen = {isOpen} {...rest}>
       <Navbar>
         <Logo to = '/'>
           <h2>Cassie Rossall <span>Front End Web Developer</span></h2>
@@ -51,10 +52,9 @@ const Header = ({isActive, ...rest}) => {
           <HamburgerIcon setIsOpen = {setIsOpen} isOpen = {isOpen}/>
         </div>
       </Navbar>
-        {
-          isOpen && <MobileNav />
-        }
     </HeaderContainer>
+    <MobileNav onscreen = {isOpen}/>
+  </>
   )
 }
 

@@ -21,9 +21,6 @@ import SocialLinks from "../components/social-links/social-links.component"
 
 export default ({ data, pageContext }) => {
     const post = data.mdx;
-    // const getPage = dir => {
-    //     return pageContext[dir] !== null ? pageContext[dir].fields.slug : null; 
-    // }
 
     const ImageContainer = styled.div`
     margin: 20px 0;
@@ -35,13 +32,17 @@ export default ({ data, pageContext }) => {
         }
     `
 
+    const ButtonWrapper = styled.div`
+    display: flex;
+    margin: 30px 0;
+    `
+
     return (
         <Layout>
             <SEO title = {post.frontmatter.title} />
-            <div>
                 <Title isLarge text = {post.frontmatter.title}/>
                 <Text>  {post.frontmatter.overview} </Text>
-                <div style= {{display: `flex`, margin: `30px 0 50px 0`}}>
+                <ButtonWrapper>
                     <CustomButton 
                         iscta = "true" 
                         withmargin = "true" 
@@ -58,7 +59,7 @@ export default ({ data, pageContext }) => {
                         <FontAwesomeIcon icon={faCode} width="0"/>
                         <span style= {{paddingLeft: `5px`}}>Github</span>
                     </CustomButton>
-                </div>
+                </ButtonWrapper>
                 <ImageContainer>
                     <Img 
                         fluid = {post.frontmatter.featuredImage.childImageSharp.fluid}
@@ -70,9 +71,8 @@ export default ({ data, pageContext }) => {
                 <ListContainer list = {post.frontmatter.stack} />
 
                 <div className="bodytext">
-                 <MDXRenderer>{post.body}</MDXRenderer>
+                    <MDXRenderer>{post.body}</MDXRenderer>
                 </div>
-            </div>
                 <PrevNextCard 
                     prev = {pageContext.prev.id}
                     next = {pageContext.next.id} 

@@ -1,5 +1,4 @@
 import React from "react"
-import {motion} from "framer-motion"
 import Img from "gatsby-image"
 
 import {ButtonWithArrow} from "../custom-button/custom-button.component"

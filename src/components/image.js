@@ -27,8 +27,8 @@ const Image = () => {
   `)
 
   return <Img 
-        fluid={data.placeholderImage.childImageSharp.fluid} 
-        placeholderStyle={{ visibility: "hidden" }}/>
+          fluid={data.placeholderImage.childImageSharp.fluid} 
+          placeholderStyle={{ visibility: "hidden" }}/>
 }
 
 export default Image

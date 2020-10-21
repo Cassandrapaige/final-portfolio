@@ -25,7 +25,6 @@ transform: translate(-50%, -50%);
 background: ${colors.dark};
 transition: .2s background ease .2s;
 
-
     @media(max-width: 600px) {
         display: block;
     };

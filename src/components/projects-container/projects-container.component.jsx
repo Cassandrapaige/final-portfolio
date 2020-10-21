@@ -33,7 +33,7 @@ const ProjectsContainer = ({data}) => {
             I've developed a deep love for React. Most of my projects are written in React but I'm currently learning Gatsby and GraphQl as I build this portfolio, and I'm always looking for new ways to improve my skillset in order to create the best user experience possible.
           </Text> 
           <Text>
-            Below is a selection of some of my favourite projects- most of which have been re-built or re-factored multiiple times as I continue to learn new skills, all of which have played an important role in my development journey. 
+            Below is a selection of some of my favourite projects — most of which have been re-built or re-factored multiple times as I continue to learn new skills; all of which have played an important role in my development journey. 
           </Text>
           <ListContainer list = {TECH_STACK} />
             {
