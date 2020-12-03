@@ -1,21 +1,23 @@
 ---
 title: "Movies R Us"
 date: "2020-09-09"
-description: "This site was built using ReactJS and the MovieDB API. It allows you to browse through hundreds of movies or search for your favourites to find ones that are similar."
-overview: "ABCs of CSS is a React Application meant to inspire new developers to create 26 websites using the provided colour palettes, font families and CSS examples. It contains 26 pages which can be accessed by pressing any of the 26 letters on your keyboard, or by choosing a specific CSS example using the dropdown navigation menu. This site was originally built using pure Javascript but has  been re-built multiple times as I continue to learn and grow news skills."
+description: "Find your favourite movies and save them for later! This React application allows you to browse through thousands of movies or search for your favourites to find ones that are similar."
+overview: "Find your favourite movies and save them for later! This React application allows you to browse through thousands of movies or search for your favourites to find ones that are similar."
 website: "https://moviesrus.netlify.app/"
 github: "https://github.com/Cassandrapaige/movies-r-us"
 featuredImage: "./images/movies.png"
-stack: ["ReactJs", "Javascript/ES6", "CSS/SCSS", "React Spring", "API"]
+stack: ["ReactJs", "Javascript/ES6", "CSS/SCSS", "React Spring"]
 ---
 
-Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.
+This application receives data from multiple API endpoints, making React a good choice thanks to its ability to lazy load data, only when and if requested by the user. 
 
-<Title text = "Things I'm proud of" />
+Reacts Context API and local storage are used throughout the application to maintain the users favourite movies, and react spring and SCSS are used to create smooth transitions between states.
 
-Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.
+<Title>Lessons Learned</Title>
 
-<Title isPurple text = "Things I'm not" />
+Being the first real React project that I built, I learned a lot regarding API integration and component structure. When I first began building this project I did a lot of code repetition making the codebase a lot more complicated than it needed to be. Originally built using class based components, I later refactored the code to use functional components and React hooks.
 
-Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.
+<Title isPurple>Accomplishments</Title>
+
+This project includes an advanced search component that displays a list of populated movie suggestions based on the users text input. The user can then navigate through the list of suggestions using keypress or click events, and retrieve the results with help from react-router-doms built-in history API.
 

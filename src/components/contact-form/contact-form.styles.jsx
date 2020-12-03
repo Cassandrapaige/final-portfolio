@@ -8,7 +8,10 @@ min-height: 60vh;
 `
 
 export const Form = styled.form`
-display: flex;
+display: -webkit-box; 
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;  
 flex-direction: column;
 
     input[type="text"], input[type="email"], textarea {

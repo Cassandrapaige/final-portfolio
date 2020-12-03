@@ -7,7 +7,7 @@ padding: 30px 40px;
 cursor: pointer;
 margin-right: 10px;
 
-    li, a {
+    li, span {
         color: ${colors.dark};
         cursor: pointer;
     }
@@ -18,10 +18,12 @@ margin-right: 10px;
 
     &:after {
         position: absolute;
-        width: 7px;
-        height: 7px;
+        width: 9px;
+        height: 9px;
         content: '';
         top: 48%;
+        -webkit-transform: translateY(-48%) rotate(45deg);
+        -ms-transform: translateY(-48%) rotate(45deg);
         transform: translateY(-48%) rotate(45deg);
         right: 25px;
         border-bottom: 2px solid ${colors.dark};
@@ -29,7 +31,7 @@ margin-right: 10px;
     }
 
 
-    @media(max-width: 900px) {
+    @media(max-width: 960px) {
         display: none;
     }
 `
@@ -39,11 +41,13 @@ list-style-type: none;
 margin: 0;
 position: absolute;
 left: 50%;
+-webkit-transform: translate(-50%, 30px);
+-ms-transform: translate(-50%, 30px);
 transform: translate(-50%, 30px);
 background: ${colors.light};
--webkit-filter: drop-shadow(0px 6px 6px rgba(19, 19, 19, .1));
-filter: drop-shadow(0px 6px 6px rgba(19, 19, 19, .1));
-box-shadow: 0px 2px 4px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+-webkit-filter: drop-shadow(rgb(0 0 0 / 12%) 0px 2px 8px);
+filter: drop-shadow(rgb(0 0 0 / 12%) 0px 2px 8px);
+box-shadow: rgb(0 0 0 / 12%) 0px 2px 8px;
 border-radius: 10px;
 padding: 20px 40px;
 min-width: 300px;
@@ -58,6 +62,8 @@ display: none;
     clip-path: polygon(0 100%, 50% 0, 100% 100%);
     top: -30px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     pointer-events: none;
 }

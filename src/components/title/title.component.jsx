@@ -2,10 +2,10 @@ import React from 'react'
 
 import {TitleContainer} from './title.styles'
 
-const Title = ({text, ...props}) => {
+const Title = ({children, ...props}) => {
     return (
         <TitleContainer {...props}>
-            {text}
+            {children}
          </TitleContainer>
     )
 }

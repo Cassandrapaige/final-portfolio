@@ -11,6 +11,7 @@ import { faLaptopCode, faCode } from "@fortawesome/free-solid-svg-icons"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 
+import Animated from "../components/animated-container/animated-container.component"
 import Layout from "../components/layout/layout.component"
 import Title from "../components/title/title.component"
 import ListContainer from "../components/list-container/list-container.component"
@@ -18,12 +19,13 @@ import Text from "../components/text/text.component"
 import { CustomButton } from "../components/custom-button/custom-button.component"
 import PrevNextCard from "../components/prev-next-card/prev-next-card.component"
 import SocialLinks from "../components/social-links/social-links.component"
+import GridContainer from "../components/grid-container/grid-container.component"
 
 export default ({ data, pageContext }) => {
     const post = data.mdx;
 
     const ImageContainer = styled.div`
-    margin: 20px 0;
+    margin: 40px 0;
     background: repeating-linear-gradient(-45deg, ${colors.secondary}, ${colors.secondary} 120px, ${colors.primary} 120px, ${colors.primary} 240px);
 
         img {
@@ -33,41 +35,55 @@ export default ({ data, pageContext }) => {
     `
 
     const ButtonWrapper = styled.div`
-    display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;  
     margin: 30px 0;
     `
 
     return (
         <Layout>
             <SEO title = {post.frontmatter.title} />
-                <Title isLarge text = {post.frontmatter.title}/>
-                <Text>  {post.frontmatter.overview} </Text>
+                <Animated>
+                    <Title isLarge>{post.frontmatter.title}</Title>
+                </Animated>
+                <Animated delay = ".1">
+                    <Text>  {post.frontmatter.overview} </Text>
+                </Animated>
+                <Animated delay = ".2">
                 <ButtonWrapper>
                     <CustomButton 
+                        as = "a"
                         iscta = "true" 
                         withmargin = "true" 
                         href = {post.frontmatter.website} 
+                        rel="noreferrer"
                         target = "_blank">
                         <FontAwesomeIcon icon={faLaptopCode} width="0"/>
                         <span style= {{paddingLeft: `5px`}}>Live Site</span>
                     </CustomButton>
 
                     <CustomButton 
+                        as = "a"
                         withmargin = "true" 
                         href = {post.frontmatter.github} 
+                        rel="noreferrer"
                         target = "_blank">
                         <FontAwesomeIcon icon={faCode} width="0"/>
                         <span style= {{paddingLeft: `5px`}}>Github</span>
                     </CustomButton>
                 </ButtonWrapper>
+                </Animated>
+                <Animated delay = ".3">
                 <ImageContainer>
                     <Img 
                         fluid = {post.frontmatter.featuredImage.childImageSharp.fluid}
                         placeholderStyle={{ visibility: "hidden" }}
                     />
                 </ImageContainer>
-
-                <Title isPurple text = "Tech Stack"></Title>
+                </Animated>
+                <Title isPurple>Tech Stack</Title>
                 <ListContainer list = {post.frontmatter.stack} />
 
                 <div className="bodytext">

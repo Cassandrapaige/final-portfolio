@@ -2,9 +2,9 @@ import React from 'react'
 
 import {TextContainer} from './text.styles'
 
-const Text = ({children}) => {
+const Text = ({children, ...rest}) => {
     return (
-        <TextContainer>
+        <TextContainer {...rest}>
             {children}
         </TextContainer>
     )

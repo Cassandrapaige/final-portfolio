@@ -5,8 +5,10 @@ export const ProjectContainer = styled.div`
 background: ${colors.primary};
 border: 1px solid ${colors.dark};
 box-shadow: 6px 6px ${colors.primary};
-display: grid;
 grid-template-columns: repeat(2, 1fr);
+-ms-grid-columns: repeat(2, 1fr);
+display: -ms-grid; 
+display: grid;
 margin-bottom: 30px;
 height: 100%;
 
@@ -27,7 +29,10 @@ height: 100%;
 
 export const ProjectOverviewContainer = styled.div`
 text-decoration: none;
-display: flex;
+display: -webkit-box; 
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;  
 flex-direction: column;
 justify-content: center;
 padding: 20px;
@@ -35,13 +40,20 @@ padding: 20px;
 
 export const ImageContainer = styled.div`
 background: rgba(255, 255, 255, .4);
-display: flex;
+display: -webkit-box; 
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;  
 flex-direction: column;
 justify-content: center;
 
 @media(max-width: 700px) {
-  max-height: 350px;
+  max-height: 400px;
   width: 100%;
+}
+
+@media(max-width: 500px) {
+  max-height: 300px;
 }
 `
 

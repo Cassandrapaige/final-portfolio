@@ -4,14 +4,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 import {Button, Arrow} from './custom-button.styles'
 
-export const CustomButton = ({id, href, children, ...rest}) => (
-    <Button id = {id} to = {href} {...rest}>
+export const CustomButton = ({id, children, ...rest}) => (
+    <Button id = {id} {...rest}>
         {children}
     </Button>
 )
 
-export const ButtonWithArrow = ({href, text, ...rest}) => (
-    <CustomButton href = {href} {...rest}> 
+export const ButtonWithArrow = ({text, ...rest}) => (
+    <CustomButton {...rest}> 
             {text}
         <Arrow className = "arrow">
             <FontAwesomeIcon icon={faArrowRight} width="0"/>

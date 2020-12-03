@@ -15,7 +15,10 @@ box-shadow: ${({iscta}) => iscta ? `3px 3px ${colors.dark}` : `3px 3px ${colors.
 background: ${({iscta}) => iscta ? colors.secondary : colors.light};
 margin: ${({withmargin}) => withmargin && `0 10px 10px 0`};
 cursor: pointer;
-display: flex;
+display: -webkit-box; 
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;  
 justify-content: center;
 align-items: center;
 overflow: hidden;
@@ -32,6 +35,8 @@ touch-action: manipulation;
 
   &:hover .arrow {
     opacity: 1;
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
     transform: translateX(10px);
   }
 `
@@ -39,5 +44,7 @@ touch-action: manipulation;
 export const Arrow = styled.span`
 opacity: 0;
 transition: all .5s ease;
+-webkit-transform: translateX(0px);
+-ms-transform: translateX(0px);
 transform: translateX(0px);
 `

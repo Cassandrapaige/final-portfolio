@@ -3,14 +3,12 @@ import colors from '../../config/colors'
 
 export const HamburgerMenuContainer = styled.div`
 position: relative;
-width: 45px;
-height: 45px;
-background: ${colors.secondary};
-border: 1px solid ${colors.dark};
+width: 40px;
+height: 40px;
 display: none;
-z-index: 1000;
+z-index: 5000;
 
-    @media(max-width: 600px) {
+    @media(max-width: 960px) {
         display: block;
     }
 `
@@ -21,13 +19,11 @@ width: 70%;
 height: 2px;
 top: 50%;
 left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 background: ${colors.dark};
 transition: .2s background ease .2s;
-
-    @media(max-width: 600px) {
-        display: block;
-    };
 
     &:before,
     &:after {
@@ -44,6 +40,8 @@ transition: .2s background ease .2s;
 
         ${({isOpen}) => isOpen && css`
             margin: 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
             transform: rotate(45deg);
             transition: margin .2s linear, transform .2s linear .2s;
         `}
@@ -54,6 +52,8 @@ transition: .2s background ease .2s;
 
         ${({isOpen}) => isOpen && css`
             margin: 0;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
             transition: margin .2s linear, transform .2s linear .2s;
         `}

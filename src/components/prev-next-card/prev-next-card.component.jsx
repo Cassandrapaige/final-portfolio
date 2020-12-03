@@ -37,7 +37,7 @@ const data = useStaticQuery(graphql`
 `)
     return (
         <div style = {{margin: `50px 0`}}>
-            <Title isLarge text = "Other Projects"/>
+            <Title isLarge>Other Projects</Title>
             <div style= {{margin: `20px 0`}}>
                 {
                     data.allMdx.edges.map(({node}, index) => (

@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components'
+import {animated} from 'react-spring'
 import colors from '../../config/colors'
 
 export const MobileNavigationMenu = styled.nav`
@@ -7,35 +8,40 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-height: 0px;
-width: 0px;
+min-height: 100vh;
+width: 100vw;
+-webkit-transform: translateX(-100%);
+-ms-transform: translateX(-100%);
+transform: translateX(-100%);
 background: ${colors.light};
-z-index: 10;
-opacity: 0;
 overflow: scroll;
-padding: 100px 50px;
+padding: 130px 50px 50px 50px;
+transition: all .2s ease;
+z-index: 30;
+
+a {
+    font-size: 19px;
+}
 
 ${({onscreen})=> onscreen && css`
-opacity: 1;
-min-height: 100vh;
-height: 100%;
-width: 100vw;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
 `}
 
 @media(max-width: 500px) {
-    padding: 100px 20px;
+    padding: 110px 20px 20px 20px;
 }
 `
 
-export const LinkContainer = styled.div`
-margin: 10px 0;
-transition: all .5s ease;
-transform: translateY(60px);
-opacity: 0;
+export const ListContainer = styled.ul`
+list-style-type: none;
 
-    ${({onscreen}) => onscreen && css`
-        transform: translateY(0px);
-        opacity: 1;
-        transition-delay: ${({interval}) => `${interval / 5}s`};
-    `}
+${({withmargin}) => withmargin && css`
+    padding-left: 50px;
+`}
+`
+
+export const LinkContainer = styled(animated.div)`
+margin: 10px 0;
 `

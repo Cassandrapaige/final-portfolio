@@ -8,6 +8,11 @@ html {
   overflow-y: scroll;
 }
 
+::selection {
+  background: #f85195;
+  color: #fff;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -22,8 +27,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background: url('../images/dots.png');
-  background-size: 90%; 
+  background: url('../images/dots3.png'), url('../images/dots2.png'), url('../images/dots4.png'), url('../images/dots5.png'), #fff;
+  background-size: 50%, 80%, 60%, 40%; 
+  background-attachment: fixed;
 }
 
 a {
@@ -33,16 +39,33 @@ a {
 
 @keyframes fly {
   0%, 100% {
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
   }
   30% {
+    -webkit-transform:  translate(40px, -60px);
+    -ms-transform:  translate(40px, -60px);
     transform: translate(40px, -60px);
   }
   60% {
+    -webkit-transform:  translate(40px, 60px);
+    -ms-transform:  translate(40px, 60px);
     transform: translate(40px, 60px);
   }
   80% {
+    -webkit-transform: translate(-40px, 60px);
+    -ms-transform: translate(-40px, 60px);
     transform: translate(-40px, 60px);
+  }
+}
+
+@keyframes slideUp {
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -384,6 +407,7 @@ ul {
   margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
+  list-style-type: none;
 }
 ol {
   margin-left: 1.45rem;

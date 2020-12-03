@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import colors from '../../config/colors'
 
 export const TextContainer = styled.p`
-font-size: 19px;
+font-size: 18px;
 font-weight: 100;
-line-height: 30px;
+line-height: 170%;
 margin-bottom: 20px;
-color: ${colors.text};
+color: ${({darken}) => darken ? `${colors.dark}` : `${colors.text}`};
 `

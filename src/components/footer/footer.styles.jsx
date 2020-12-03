@@ -16,4 +16,8 @@ border-top: 2px solid ${colors.secondary};
     font-weight: 100;
     line-height: 30px;
  }
+
+ span, .fa-heart {
+    color: #f85195;
+ }
 `

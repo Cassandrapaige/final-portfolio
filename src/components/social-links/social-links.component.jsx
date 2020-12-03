@@ -13,9 +13,11 @@ const SocialLinks = () => (
       {
         SOCIAL_LINKS.map((link, index) => (
           <CustomButton 
+            as = "a"
             withmargin = "true" 
             target = "_blank"
             href = {link.href} 
+            rel="noreferrer"
             key = {index}>
             <FontAwesomeIcon icon={link.icon} width="0"/>
             <span style= {{paddingLeft: `10px`}}>{link.name}</span>
@@ -27,14 +29,14 @@ const SocialLinks = () => (
 
 const SOCIAL_LINKS = [
   {
-    name: 'Twitter',
-    href: 'https://twitter.com/CassandraPaigee',
-    icon: faTwitter
-  },
-  {
     name: 'Github',
     href: 'https://github.com/Cassandrapaige',
     icon: faGithub
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/CassandraPaigee',
+    icon: faTwitter
   },
   {
     name: 'Codepen',

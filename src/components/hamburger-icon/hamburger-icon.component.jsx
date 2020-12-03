@@ -2,11 +2,10 @@ import React from 'react'
 
 import {HamburgerMenuContainer, HamburgerMenu} from './hamburger-icon.styles'
 
-const HamburgerIcon = ({isOpen, setIsOpen}) => {
-
+const HamburgerIcon = ({handleClick, ...rest}) => {
     return (
-         <HamburgerMenuContainer onClick = {() => setIsOpen(!isOpen)} isOpen = {isOpen}>
-            <HamburgerMenu isOpen = {isOpen}/>
+         <HamburgerMenuContainer onClick = {handleClick} {...rest}>
+            <HamburgerMenu {...rest}/>
         </HamburgerMenuContainer>
     )
 }

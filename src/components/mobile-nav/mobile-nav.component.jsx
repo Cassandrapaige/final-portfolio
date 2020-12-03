@@ -1,45 +1,74 @@
 import React from 'react'
-import {useStaticQuery, graphql} from 'gatsby'
+import {config, useSpring} from 'react-spring';
+import {Link ,useStaticQuery, graphql} from 'gatsby'
 
-import {MobileNavigationMenu, LinkContainer} from './mobile-nav.styles'
-
-import {CustomButton, ButtonWithArrow} from '../custom-button/custom-button.component'
+import {MobileNavigationMenu, LinkContainer, ListContainer} from './mobile-nav.styles'
 import SocialLinks from '../social-links/social-links.component'
+import Title from '../title/title.component'
+import ListItem from '../list-item/list-item.component'
+
+
+const AnimatedContainer = ({delay, onscreen, children, ...rest}) => {
+    const props = useSpring({
+        to: {
+            opacity: onscreen ? 1 : 0,
+            transform: onscreen ? 'translateX(0px)' : 'translateX(-150px)',
+        },
+        config: config.default,
+        delay: onscreen ? `${delay}` : 0
+    });
+
+    return (
+        <LinkContainer style = {props}>
+            {children}
+        </LinkContainer>
+    )
+}
 
 const MobileNav = ({...rest}) => {
     const data = useStaticQuery(graphql`
-    query {
-        allMdx{
-          edges {
-            node {
-              frontmatter {
-                title
-              }
-              fields {
-                  slug
-              }
+        query {
+            allMdx{
+            edges {
+                node {
+                frontmatter {
+                    title
+                }
+                fields {
+                    slug
+                }
+                }
             }
-          }
-        }
-      } 
+            }
+        } 
     `)
+
     return (
         <MobileNavigationMenu {...rest}>
-            <LinkContainer interval = "0" {...rest}>
-                <CustomButton iscta = "true" href = "/contact">Contact</CustomButton>
-            </LinkContainer>
+            <AnimatedContainer delay = "0" {...rest}>
+                <ListContainer>
+                    <Link to = "/contact">
+                        <ListItem item = "Contact" />
+                    </Link>
+                </ListContainer>
+            </AnimatedContainer>
+            <AnimatedContainer delay = "300" {...rest}>
+                <Title isPurple>Projects</Title>
+            </AnimatedContainer>
             {
                 data.allMdx.edges.map(({node}, index) => (
-                    <LinkContainer interval = {index + 1} {...rest}>
-                        <CustomButton href = {node.fields.slug}>
-                            {node.frontmatter.title} | Project
-                        </CustomButton>
-                    </LinkContainer>
+                    <AnimatedContainer  delay = "600" key = {index} {...rest}>
+                        <ListContainer withmargin>
+                            <Link to = {node.fields.slug}>
+                                <ListItem isLink item = {node.frontmatter.title} />
+                            </Link>
+                        </ListContainer>
+                    </AnimatedContainer>
                 ))
             }
-            <LinkContainer interval = "7" {...rest}>
+            <AnimatedContainer delay = "900" {...rest}>
                 <SocialLinks />
-            </LinkContainer>
+            </AnimatedContainer>
         </MobileNavigationMenu>
     )
 }

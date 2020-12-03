@@ -2,20 +2,19 @@
 title: "Covid-19"
 date: "2020-09-07"
 description: "This application receives data from multple API endpoints, allowing users to stay up-to-date with the latest stats and news stories regaring the Covid-19 virus."
-overview: "This is a React Application that utlizes the coronavirus-19-api, as well as The News API, allowing users to stay up-to-date with the latest stats and news stories regaring the Covid-19 virus. I have used this website every day since the beginning of the virus and find the search feature particularly helpful when wanting to see the stats for a specific country. Unfortunately, as of right now the news articles are only available in production mode, as the News API recently made some changes to their liberties regarding free developer keys."
+overview: "This is a React Application that utlizes the coronavirus-19-api, as well as The Guardian API, allowing users to stay up-to-date with the latest stats and news stories regaring the Covid-19 virus."
 website: "https://covid19-news.netlify.app/"
 github: "https://github.com/Cassandrapaige/covid-19"
 featuredImage: "./images/covid.png"
-stack: ["ReactJs", "Javascript/ES6", "CSS/SCSS", "API"]
+stack: ["ReactJs", "Javascript/ES6", "CSS/SCSS"]
 ---
 
-Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.
+This project receives data from multiple API endpoints, making React a good choice for this application as it gives us the added abililty to manipulate state without having to re-render our pages.
 
-<Title text = "Things I'm proud of" />
+<Title>Project Purpose</Title>
 
-Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.
+As I have personally used this application every day since the beginning of the virus, I wanted to create a site that was both visually appealing and informative. The built-in search component and the ability to filter data based on number of cases make this application particularly helpful.
 
-<Title isPurple text = "Things I'm not" />
+<Title isPurple>Problems</Title>
 
-Leneque consectetur ut. Duis in lectus vel augue semper suscipit. Cras quam ipsum, vehicula eu est et, tincidunt auctor sapien. Fusce quis iaculis magna. Duis ultricies enim enim, sit amet congue enim pretium et. Morbi sed felis ipsum. Suspendisse cursus eros tincidunt tempus tincidunt. Sed cursus magna quis dapibus ultrices. Proin lacinia ex sapien, ac auctor magna dapibus sit amet. Fusce finibus aliquam nisi. Aliquam a sem leo. Suspendisse lectus ligula, sollicitudin ut nisl sed, ultricies dignissim nisi. Maecenas eu nibh in nisl aliquam finibus quis vel justo. Donec ultricies malesuada nunc non rutrum.
-
+I ran into a few issues regarding the APIs for this project so code management was key to this applications success. Recently the News API made some changes to their liberties regarding free developer keys, so I migrated this project over to use the Guradian API, making minor tweaks to the code structure to keep the application in working order.

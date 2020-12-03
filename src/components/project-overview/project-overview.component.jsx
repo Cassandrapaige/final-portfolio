@@ -7,8 +7,7 @@ import Text from "../text/text.component"
 import {ProjectContainer, 
         ProjectOverviewContainer, 
         ImageContainer, 
-        BlogTitle,
-        Arrow} 
+        BlogTitle} 
         from "./project-overview.styles"
 
 const ProjectOverview = ({node, ...rest}) => {
@@ -22,9 +21,9 @@ const ProjectOverview = ({node, ...rest}) => {
             </ImageContainer>
             <ProjectOverviewContainer>
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>
-                <Text>{node.frontmatter.description}</Text>
+                <Text darken>{node.frontmatter.description}</Text>
                 <ButtonWithArrow 
-                    href = {node.fields.slug}
+                    to = {node.fields.slug}
                     text = "View Project" 
                 />
             </ProjectOverviewContainer>
