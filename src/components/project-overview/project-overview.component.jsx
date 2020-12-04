@@ -23,6 +23,7 @@ const ProjectOverview = ({node, ...rest}) => {
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>
                 <Text darken>{node.frontmatter.description}</Text>
                 <ButtonWithArrow 
+                    color = "#fff"
                     to = {node.fields.slug}
                     text = "View Project" 
                 />

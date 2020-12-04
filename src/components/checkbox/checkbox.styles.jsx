@@ -42,8 +42,8 @@ export const Label = styled.label`
         left: 0;
         top: 0;
         border: 1px solid ${colors.dark};
-        background: ${colors.secondary};
-        box-shadow: 3px 3px ${colors.secondary};
+        background: ${colors.accent};
+        box-shadow: 3px 3px ${colors.accent};
 
         path {
             transition: stroke-dashoffset .4s linear;

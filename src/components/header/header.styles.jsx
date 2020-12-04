@@ -20,6 +20,7 @@ padding: 5px 40px;
 
     @media(max-width: 960px) {
         padding: 20px;
+        box-shadow: none;
 
         #ctaBtn {
             display: none;
@@ -55,7 +56,6 @@ line-height: 28px;
             font-weight: 300;
             font-size: 19px;
             padding-left: 5px;
-            color: ${colors.text};
 
             @media(max-width: 900px) {
                 display: block;

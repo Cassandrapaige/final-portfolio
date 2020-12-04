@@ -3,6 +3,6 @@ export default {
     secondary: '#b4eaea',
     accent: '#ffdd5c',
     light: '#fff',
-    dark: '#111',
-    text: '#666'
+    dark: '#333',
+    text: '#696969'
 }

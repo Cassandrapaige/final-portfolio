@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import colors from '../../config/colors'
 
 export const ProjectContainer = styled.div`
-background: ${colors.primary};
+background: ${colors.secondary};
 border: 1px solid ${colors.dark};
-box-shadow: 6px 6px ${colors.primary};
+box-shadow: 6px 6px ${colors.secondary};
 grid-template-columns: repeat(2, 1fr);
 -ms-grid-columns: repeat(2, 1fr);
 display: -ms-grid; 
@@ -12,14 +12,23 @@ display: grid;
 margin-bottom: 30px;
 height: 100%;
 
+  a {
+    border-radius: 0;
+  }
+
   &:nth-child(2n) {
-    background: ${colors.secondary};
-    box-shadow: 6px 6px ${colors.secondary};
+    background: ${colors.primary};
+    box-shadow: 6px 6px ${colors.primary};
 
     a:hover {
       box-shadow: 2px 2px ${colors.dark};
-      background: ${colors.primary};
+      background: ${colors.secondary};
     }
+  }
+
+  a:hover {
+    box-shadow: 2px 2px ${colors.dark};
+    background: ${colors.primary};
   }
 
   @media(max-width: 700px) {

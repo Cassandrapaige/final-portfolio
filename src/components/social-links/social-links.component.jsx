@@ -14,6 +14,7 @@ const SocialLinks = () => (
         SOCIAL_LINKS.map((link, index) => (
           <CustomButton 
             as = "a"
+            color = {link.color}
             withmargin = "true" 
             target = "_blank"
             href = {link.href} 
@@ -31,22 +32,26 @@ const SOCIAL_LINKS = [
   {
     name: 'Github',
     href: 'https://github.com/Cassandrapaige',
-    icon: faGithub
+    icon: faGithub,
+    color: '#b4eaea'
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/CassandraPaigee',
-    icon: faTwitter
+    icon: faTwitter,
+    color: '#ffdd5c'
   },
   {
     name: 'Codepen',
     href: 'https://codepen.io/cassandraPaige',
-    icon: faCodepen
+    icon: faCodepen,
+    color: '#c1b7e8'
   },
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/cassandra-rossall-084a90b4/',
-    icon: faLinkedin
+    icon: faLinkedin,
+    color: '#fff'
   },
 ]
 

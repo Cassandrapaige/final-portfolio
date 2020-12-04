@@ -8,9 +8,20 @@ html {
   overflow-y: scroll;
 }
 
-::selection {
+::selection{
   background: #f85195;
   color: #fff;
+}
+
+::-moz-selection {
+  background: #f85195;
+  color: #fff;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 body {
@@ -27,8 +38,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background: url('../images/dots3.png'), url('../images/dots2.png'), url('../images/dots4.png'), url('../images/dots5.png'), #fff;
-  background-size: 50%, 80%, 60%, 40%; 
+  background: url('../images/dots7.png'), url('../images/dots5.png'), url('../images/dots2.png'), #fff;
+  background-size: 90%;
+  background-position: left, top, center, bottom, 30% 20%;
   background-attachment: fixed;
 }
 

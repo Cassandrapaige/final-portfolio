@@ -9,7 +9,7 @@ featuredImage: "./images/covid.png"
 stack: ["ReactJs", "Javascript/ES6", "CSS/SCSS"]
 ---
 
-This project receives data from multiple API endpoints, making React a good choice for this application as it gives us the added abililty to manipulate state without having to re-render our pages.
+This project receives data from multiple API endpoints, making React a good choice as it gives us the added abililty to manipulate state without having to re-render our pages.
 
 <Title>Project Purpose</Title>
 

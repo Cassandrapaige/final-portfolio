@@ -1,20 +1,24 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import colors from '../../config/colors'
 
 export const TitleContainer = styled.h2`
-padding: 20px 0;
-color: ${({isPurple}) => isPurple ? `${colors.primary}` : `${colors.secondary}`};
-font-size: ${({isLarge}) => isLarge ? '80px' : '40px'};
+color: ${colors.secondary};
+font-size: ${({isLarge}) => isLarge ? '4.5rem' : '2.5rem'};
 -webkit-text-stroke: 1px ${colors.dark};
 position: relative;
 font-weight: 900;
+margin-bottom: 20px;
+line-height: 100%;
 
+${({isPurple}) => isPurple && css`
+    color: ${colors.primary};
+`}
 
 span {
     color: ${colors.accent};
 }
 
 @media(max-width: 750px) {
-    font-size: ${({isLarge}) => isLarge ? '50px' : '30px'};
+    font-size: ${({isLarge}) => isLarge ? '3.5rem' : '2rem'};
 }
 `

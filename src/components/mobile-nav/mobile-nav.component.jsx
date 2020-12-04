@@ -48,7 +48,7 @@ const MobileNav = ({...rest}) => {
             <AnimatedContainer delay = "0" {...rest}>
                 <ListContainer>
                     <Link to = "/contact">
-                        <ListItem item = "Contact" />
+                        <ListItem isLink item = "Contact" />
                     </Link>
                 </ListContainer>
             </AnimatedContainer>
@@ -57,7 +57,7 @@ const MobileNav = ({...rest}) => {
             </AnimatedContainer>
             {
                 data.allMdx.edges.map(({node}, index) => (
-                    <AnimatedContainer  delay = "600" key = {index} {...rest}>
+                    <AnimatedContainer delay = "600" key = {index} {...rest}>
                         <ListContainer withmargin>
                             <Link to = {node.fields.slug}>
                                 <ListItem isLink item = {node.frontmatter.title} />

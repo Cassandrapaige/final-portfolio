@@ -5,6 +5,11 @@ export const FormContainer = styled.div`
 padding: 20px;
 border: 1px solid ${colors.secondary};
 min-height: 60vh;
+
+@media(max-width: 750px) {
+    padding: 0px;
+    border: none;        
+}
 `
 
 export const Form = styled.form`
