@@ -4,8 +4,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 import {Button, Arrow} from './custom-button.styles'
 
-export const CustomButton = ({id, color = "fff", children, ...rest}) => (
-    <Button id = {id} color = {color} {...rest}>
+export const CustomButton = ({id, children, ...rest}) => (
+    <Button id = {id} {...rest}>
         {children}
     </Button>
 )

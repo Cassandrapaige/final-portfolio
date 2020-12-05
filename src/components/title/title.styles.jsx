@@ -19,6 +19,6 @@ span {
 }
 
 @media(max-width: 750px) {
-    font-size: ${({isLarge}) => isLarge ? '3.5rem' : '2rem'};
+    font-size: ${({isLarge}) => isLarge ? '3rem' : '2rem'};
 }
 `

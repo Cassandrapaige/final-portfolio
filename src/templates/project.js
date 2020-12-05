@@ -48,10 +48,10 @@ export default ({ data, pageContext }) => {
                 <Animated>
                     <Title isLarge>{post.frontmatter.title}</Title>
                 </Animated>
-                <Animated delay = ".1">
+                <Animated delay = "100">
                     <Text>  {post.frontmatter.overview} </Text>
                 </Animated>
-                <Animated delay = ".2">
+                <Animated delay = "200">
                 <ButtonWrapper>
                     <CustomButton 
                         as = "a"
@@ -75,7 +75,7 @@ export default ({ data, pageContext }) => {
                     </CustomButton>
                 </ButtonWrapper>
                 </Animated>
-                <Animated delay = ".3">
+                <Animated delay = "300">
                 <ImageContainer>
                     <Img 
                         fluid = {post.frontmatter.featuredImage.childImageSharp.fluid}

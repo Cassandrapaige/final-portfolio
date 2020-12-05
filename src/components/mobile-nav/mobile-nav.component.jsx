@@ -7,14 +7,13 @@ import SocialLinks from '../social-links/social-links.component'
 import Title from '../title/title.component'
 import ListItem from '../list-item/list-item.component'
 
-
 const AnimatedContainer = ({delay, onscreen, children, ...rest}) => {
     const props = useSpring({
         to: {
             opacity: onscreen ? 1 : 0,
             transform: onscreen ? 'translateX(0px)' : 'translateX(-150px)',
         },
-        config: config.default,
+        config: config.wobbly,
         delay: onscreen ? `${delay}` : 0
     });
 
@@ -45,7 +44,7 @@ const MobileNav = ({...rest}) => {
 
     return (
         <MobileNavigationMenu {...rest}>
-            <AnimatedContainer delay = "0" {...rest}>
+            <AnimatedContainer {...rest}>
                 <ListContainer>
                     <Link to = "/contact">
                         <ListItem isLink item = "Contact" />

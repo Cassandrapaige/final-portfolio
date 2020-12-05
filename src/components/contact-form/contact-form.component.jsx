@@ -78,10 +78,10 @@ const ContactForm = () => {
         {success && (
           <p style={{ color: "green" }}>Thanks for your message! </p>
         )}
-        <Animated delay = ".1">
+        <Animated delay = "100">
             <Text>Hi! I'm currently looking for job opportunities in Canada or abroad. If you'd like to know more about me or get a copy of my resume, send me a message! Otherwise, say hi on Twitter. I promise I'm nice!</Text>
         </Animated>
-        <Animated delay = ".2">
+        <Animated delay = "200">
         <Form 
             name= "contact"
             method="post"
