@@ -6,6 +6,7 @@ position: relative;
 color: ${colors.text};
 font-size: 17px;
 line-height: 150%;
+font-weight: 100;
 
     &:before {
         content: '';

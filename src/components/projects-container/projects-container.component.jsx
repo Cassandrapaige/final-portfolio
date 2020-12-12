@@ -24,14 +24,12 @@ const ProjectsContainer = ({data}) => {
     `)
 
     const TECH = STACK.allMdx.edges.map(({node}) => node.frontmatter.stack);
-    const TECH_STACK = [...new Set([...TECH[0], ...TECH[1], ...TECH[2], ...TECH[3], ...TECH[4]])];  
+    const ADDITIONAL_TECH = ["Gatsby", "GraphQl", "Git/Github", "Netlify", "Heroku"];
+    const TECH_STACK = [...new Set([...TECH[0], ...TECH[1], ...TECH[2], ...TECH[3], ...TECH[4], ...ADDITIONAL_TECH])];  
 
     return (
       <ProjectSectionContainer>
           <Title isPurple>My Projects</Title>
-          {/* <Text>
-            I have a deep love for React. Most of my projects are written in React but I'm currently learning Gatsby and GraphQl as I build this portfolio, and I'm always looking for new ways to improve my skillset in order to create the best user experience possible.
-          </Text>  */}
           <Text>
             Below is a selection of some of my favourite projects — most of which have been re-built or re-factored multiple times as I continue to learn new skills; all of which have played an important role in my development journey. 
           </Text>

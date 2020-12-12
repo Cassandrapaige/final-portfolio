@@ -13,7 +13,11 @@ const AnimatedContainer = ({delay, onscreen, children, ...rest}) => {
             opacity: onscreen ? 1 : 0,
             transform: onscreen ? 'translateX(0px)' : 'translateX(-150px)',
         },
-        config: config.wobbly,
+        config: {
+            mass: 1,
+            tension: 150,
+            friction: 15
+          },
         delay: onscreen ? `${delay}` : 0
     });
 
@@ -52,7 +56,7 @@ const MobileNav = ({...rest}) => {
                 </ListContainer>
             </AnimatedContainer>
             <AnimatedContainer delay = "300" {...rest}>
-                <Title isPurple>Projects</Title>
+                <Title isPurple style= {{margin: `30px 0`}}>Projects</Title>
             </AnimatedContainer>
             {
                 data.allMdx.edges.map(({node}, index) => (

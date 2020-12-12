@@ -13,7 +13,7 @@ border-top: 2px solid ${colors.secondary};
  h4 {
     font-family: muli, sans-serif;
     font-size: 19px;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 30px;
  }
 

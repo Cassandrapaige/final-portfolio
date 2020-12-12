@@ -1,23 +1,27 @@
 ---
 title: "ABCs of CSS"
 date: "2020-09-04"
-description: "26 layouts containing 26 code snippets to help build your portfolio and boost your creativity. Toggle between pages using the navigation menu or pressing any letter on your keyboard."
-overview: "You heard it. This is the place where old projects go to die. Built using ReactJS, this websites sole purpose is to keep track of all the weird things I've built. **Coming soon!**"
-website: "https://abcsofcss.netlify.app/"
-github: "https://github.com/Cassandrapaige/abcsofcss"
+description: "Using keypress navigation, explore 26 layouts containing 26 code snippets, font-families and color palettes to help build your portfolio and boost your creativity."
+overview: "Using keypress navigation, explore 26 layouts containing 26 code snippets, font-families and color palettes to help build your portfolio and boost your creativity."
+website: "https://abcsofcss.netlify.app"
+github: "https://github.com/Cassandrapaige/abcs"
 featuredImage: "./images/abcs.png"
-stack: ["ReactJs", "Gatsby", "GraphQl", "Javascript/ES6", "CSS/SCSS", "Styled Components", "Git/Github", "Netlify"]
+stack: ["ReactJs", "Javascript/ES6", "CSS/SCSS", "Styled Components"]
 ---
 
-Local storage is used throughout the application to maintain the users cart items, cart total and currency preference, making it easy to share user data across components without the added expense of using Redux.
+This application was originally built using vanilla Javascript, but later refactored to use React hooks and styled components.
 
-<Title>Lessons Learned</Title>
+Styled components make it easy for us to pass props into our CSS so that we can render styles based on the users route parameters.
 
-By combining Context API with a reducer, we were able to create a global store for all the state in our application, without relying on passing props down through the component tree. This makes our application set up for any future expansions and the overall process was a lot easier to implement than I initially expected.
+<Title>Accomplishments</Title>
 
-<Title isPurple>Accomplishments</Title>
+I spent a good amount of time making all of the individual CSS examples and creating eye-catching color combinations that would excite the user.
 
-I wanted to create this project from scratch, without the use of any added libraries so I spent a good amount of time creating the custom carousels and scroll animations. 
+Recently I created a copy-to-clipboard component, giving the user the added ability to copy the provided font-family and color-palette directly to their clipboard. By enabling this feature, we have greatly reduced the efforts required by the user, thus enhancing the overall user experience.
 
-I also found the concept of creating custom hooks a little daunting before the start of this project, so I used this application as a playground to get more comfortable with extracting logic into custom hooks to make component compisition more accessible.
+<Title isPurple>Future Improvements</Title>
+
+I still have quite a few features I would like to add to this application. Number one being a homepage that explains in detail the applications overall purpose.
+
+My main goal however, is to set up a back-end that allows users to create an account to showcase their work and receive feedback from other developers. This is a feature that I will implement in the future as I expand my experience to working with back-end technologies like Mongo and Express.
 

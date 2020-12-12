@@ -9,13 +9,13 @@ html {
 }
 
 ::selection{
-  background: #f85195;
-  color: #fff;
+  background: #C1B7E8;
+  color: #333;
 }
 
 ::-moz-selection {
-  background: #f85195;
-  color: #fff;
+  background: #C1B7E8;
+  color: #333;
 }
 
 img {
@@ -42,6 +42,12 @@ body {
   background-size: 90%;
   background-position: left, top, center, bottom, 30% 20%;
   background-attachment: fixed;
+}
+
+@media(max-width: 960px) {
+  body {
+    background: #fff;
+  }
 }
 
 a {
@@ -463,7 +469,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 30px;
   margin-bottom: 20px;
   color: #696969;
