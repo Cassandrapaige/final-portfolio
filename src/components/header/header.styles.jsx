@@ -53,7 +53,7 @@ line-height: 28px;
         font-size: 26px;
 
         span {
-            font-weight: 300;
+            font-weight: 400;
             font-size: 19px;
             padding-left: 5px;
 

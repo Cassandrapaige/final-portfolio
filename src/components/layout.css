@@ -28,7 +28,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
   font-family: muli, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -38,10 +37,10 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background: url('../images/dots7.png'), url('../images/dots5.png'), url('../images/dots2.png'), #fff;
-  background-size: 90%;
-  background-position: left, top, center, bottom, 30% 20%;
-  background-attachment: fixed;
+  background:  url('../images/dots.svg'), url('../images/dots1.svg') #fff;
+  background-size: 80%, 70%;
+  background-position: top, bottom;
+  background-attachment: fixed; 
 }
 
 @media(max-width: 960px) {

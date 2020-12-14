@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import colors from '../../config/colors'
 
 export const FormContainer = styled.div`
-padding: 20px;
-border: 1px solid ${colors.secondary};
+// padding: 20px;
+// border: 1px solid ${colors.secondary};
 min-height: 60vh;
 
 @media(max-width: 750px) {

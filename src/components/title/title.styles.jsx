@@ -8,6 +8,7 @@ font-size: ${({isLarge}) => isLarge ? '4.5rem' : '2.5rem'};
 position: relative;
 font-weight: 900;
 margin-bottom: 20px;
+margin-top: ${({isLarge}) => !isLarge && '35px'};
 line-height: 100%;
 
 ${({isPurple}) => isPurple && css`

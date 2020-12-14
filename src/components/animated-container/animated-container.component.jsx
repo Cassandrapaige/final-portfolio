@@ -5,7 +5,7 @@ const Animated = ({children, delay = 0}) => {
     const props = useSpring({
         from: {
             opacity: 0,
-            transform: `translateY(130px)`
+            transform: `translateY(80px)`
         },
         to: {
             opacity: 1,
@@ -15,11 +15,10 @@ const Animated = ({children, delay = 0}) => {
         duration: 1000,
         config: {
             mass: 5,
-            tension: 130,
+            tension: 200,
             friction: 40
           }
     })
-
 
     return (
         <animated.div delay = {delay} style= {props}>

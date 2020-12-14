@@ -12,6 +12,10 @@ margin-right: 10px;
         cursor: pointer;
     }
 
+    span {
+        font-weight: 900;
+    }
+
     &:hover ul{
         display: block;
     }
