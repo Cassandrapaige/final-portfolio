@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
 width: 100%;
 background: ${colors.light};
 text-align: center;
-padding: 22px 50px 35px 50px;
+padding: 30px 50px;
 font-weight: 500;
 font-size: 20px;
 border-top: 2px solid ${colors.secondary};

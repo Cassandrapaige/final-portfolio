@@ -1,4 +1,4 @@
-import React, {useState, createRef, useEffect} from 'react';
+import React, {useState, createRef, useEffect, useCallback} from 'react';
 
 import {FormContainer, Form, FormGroup} from './contact-form.styles';
 
@@ -13,22 +13,25 @@ import Animated from '../animated-container/animated-container.component';
 const ContactForm = () => {
     const [isChecked, setIsChecked] = useState(false);
     const textInput = createRef();
-    const [errorMessage, setErrorMessage] = useState(null);
+    const [error, setError] = useState(null);
     const [name, setName] = useForm("");
     const [email, setEmail] = useForm("");
     const [message, setMessage] = useForm("");
+    const [submitting, setSubmitting] = useState(false);
 
     const handleCheckbox = () => setIsChecked(!isChecked);
 
     useEffect(() => {
         if(textInput.current.value === "") textInput.current.focus();
-    }, [textInput])
+    },[]);
 
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-      if(window.location.search.includes('success=true') ) {
+      if(window.location.search.includes('success=true')) {
         setSuccess(true);
+        setSubmitting(false);
+        window.scrollTo(0, 0);
       }
     }, []);
 
@@ -39,23 +42,13 @@ const ContactForm = () => {
     }
 
     const handleSubmit = event => {
-        if(name === "") {
+        if(name === "" || email === "" || message === "") {
             event.preventDefault();
-            setErrorMessage("You forgot to enter a name")
-        }
-
-        if(email === "") {
-            event.preventDefault();
-            setErrorMessage("You forgot to enter an email")
-        }
-
-        if(message === "") {
-            event.preventDefault();
-            setErrorMessage("You haven't written a message yet")
+            setSubmitting(true);
         }
 
         else {
-            setErrorMessage(null);
+            setError(null);
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -76,7 +69,9 @@ const ContactForm = () => {
             <Title isLarge>Get in touch<span>!</span></Title>
         </Animated>
         {success && (
-          <p style={{ color: "green" }}>Thanks for your message! </p>
+        <Animated delay = "100">
+          <p style={{ fontWeight: 600, fontSize: `1.1em` }}>Thanks for your message! 👋 </p>
+        </Animated>
         )}
         <Animated delay = "100">
             <Text>Hi! I'm currently looking for job opportunities in Canada or abroad. If you'd like to know more about me or get a copy of my resume, send me a message! Otherwise, say hi on Twitter. I promise I'm nice!</Text>
@@ -90,7 +85,7 @@ const ContactForm = () => {
             data-netlify-honeypot="bot-field" >
             <input type="hidden" name ="contact" value ="contact"/>
 
-            <FormGroup>
+            <FormGroup error = {submitting && name === ""}>
                 <label htmlFor="name">Full name</label>
                 <input 
                     type = "text" 
@@ -101,7 +96,7 @@ const ContactForm = () => {
                 /> 
             </FormGroup>
 
-            <FormGroup>
+            <FormGroup error = {submitting && email === ""}>
                 <label htmlFor="email">Email</label>
                 <input 
                     type = "email" 
@@ -111,9 +106,10 @@ const ContactForm = () => {
                 /> 
             </FormGroup>
 
-            <FormGroup>
+            <FormGroup error = {submitting &&  message === ""}>
                 <label htmlFor="message">How can I help you?</label>
                 <textarea 
+                    error = "true"
                     name = "message" 
                     value = {message}
                     onChange = {setMessage}
@@ -125,7 +121,6 @@ const ContactForm = () => {
                 handleChange = {handleCheckbox}
                 label = {`I${name && `, ${name},`} promise to only send nice messages.`}
             />
-            <div className="error-message" style= {{color: 'red'}}>{errorMessage}</div>
             <div data-netlify-captcha></div>
             <ButtonWithArrow 
                 as = "button" 

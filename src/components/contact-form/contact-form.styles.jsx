@@ -1,15 +1,8 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import colors from '../../config/colors'
 
 export const FormContainer = styled.div`
-// padding: 20px;
-// border: 1px solid ${colors.secondary};
 min-height: 60vh;
-
-@media(max-width: 750px) {
-    padding: 0px;
-    border: none;        
-}
 `
 
 export const Form = styled.form`
@@ -75,4 +68,10 @@ export const FormGroup = styled.div`
 display: flex;
 flex-direction: column;
 margin-top: 12px;
+margin: 10px 0;
+
+${({error}) => error && css`
+    outline: 3px solid ${colors.primary};
+    outline-offset: 10px;
+`}
 `

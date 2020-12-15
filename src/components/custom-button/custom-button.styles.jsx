@@ -26,6 +26,7 @@ overflow: hidden;
 -ms-user-select: none;
 user-select: none;
 touch-action: manipulation;
+font-weight: 500;
 
   ${({iscta}) => iscta && css`
     background: ${colors.secondary};  

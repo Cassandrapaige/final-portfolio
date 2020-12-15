@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em muli, sans-serif;
+  font: 112.5%/1.45em Montserrat, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -28,7 +29,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: muli, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-style: normal;
   word-wrap: break-word;
@@ -53,6 +54,31 @@ a {
   text-decoration: none;
   color: hsla(0, 0%, 0%, 0.8);
 }
+
+@keyframes comeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
 
 @keyframes fly {
   0%, 100% {
@@ -468,7 +494,6 @@ p {
   padding-right: 0;
   padding-top: 0;
   font-size: 19px;
-  font-weight: 100;
   line-height: 30px;
   margin-bottom: 20px;
   color: #696969;

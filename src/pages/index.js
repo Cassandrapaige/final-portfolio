@@ -25,7 +25,7 @@ export default ({ data }) => {
             <Animated delay = "100">
               <Text>
                 I'm a self-taught Web Developer passionate about using modern technologies to create sweet ass web things..*cough. 
-                I mean scalable web applications with a focus on responsive design and web accessibility.
+                I mean scalable web applications with a focus on clean, responsive design and user-friendly experiences.
                 Take a look around to see what I've been working on.
               </Text>
             </Animated>

@@ -24,7 +24,7 @@ const PhotoGallery = () => {
 const IMAGE_GALLERY = [
   {
     src: selfie5,
-    alt: 'self portrait making a funny face'
+    alt: 'the most professional photo I could get of myself'
   },
   {
     src: selfie2,

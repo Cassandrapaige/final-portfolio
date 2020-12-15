@@ -13,7 +13,7 @@ margin-right: 10px;
     }
 
     span {
-        font-weight: 900;
+        font-weight: 500;
     }
 
     &:hover ul{
