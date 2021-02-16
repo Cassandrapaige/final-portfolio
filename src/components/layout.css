@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;900&display=swap");
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -33,9 +33,9 @@ body {
   font-weight: 400;
   font-style: normal;
   word-wrap: break-word;
-  background: url("../images/dots.svg"), url("../images/dots1.svg") #fff;
-  background-size: 80%, 70%;
-  background-position: top, bottom;
+  background: url("../images/dots.svg"), url("../images/dots2.svg") #fff;
+  background-size: 100%, 100%;
+  background-position: top, center;
   background-attachment: fixed;
 }
 
