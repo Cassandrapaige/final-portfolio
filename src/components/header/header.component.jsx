@@ -51,7 +51,7 @@ const Header = ({isOpen, setIsOpen, isActive, ...rest}) => {
         </div>
       </Navbar>
     </HeaderContainer>
-    <MobileNav onscreen = {isOpen}/>
+    <MobileNav data = {data} onscreen = {isOpen}/>
   </>
   )
 }

@@ -28,24 +28,7 @@ const AnimatedContainer = ({delay, onscreen, children, ...rest}) => {
     )
 }
 
-const MobileNav = ({...rest}) => {
-    const data = useStaticQuery(graphql`
-        query {
-            allMdx{
-            edges {
-                node {
-                frontmatter {
-                    title
-                }
-                fields {
-                    slug
-                }
-                }
-            }
-            }
-        } 
-    `)
-
+const MobileNav = ({data, ...rest}) => {
     return (
         <MobileNavigationMenu {...rest}>
             <AnimatedContainer {...rest}>

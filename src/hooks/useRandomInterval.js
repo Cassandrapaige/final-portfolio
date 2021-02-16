@@ -1,6 +1,7 @@
-import {useEffect, useRef, useCallback} from 'react'
+import {useEffect, useRef, useCallback} from 'react';
 
 import random from '../utilities/random'
+import typeError from '../utilities/typeError';
 
 const useRandomInterval = (callback, minDelay, maxDelay) => {
     const timeoutId = useRef(null);
@@ -11,20 +12,17 @@ const useRandomInterval = (callback, minDelay, maxDelay) => {
     });
   
     useEffect(() => {
-      let isEnabled = typeof minDelay === 'number' && typeof maxDelay === 'number';
+      if (typeError([minDelay, maxDelay], ["number"])) return;
 
-      if (isEnabled) {
+      const handleTick = () => {
+        const nextTickAt = random(minDelay, maxDelay);
+        timeoutId.current = window.setTimeout(() => {
+          savedCallback.current();
+          handleTick();
+        }, nextTickAt);
+      };
+      handleTick();
 
-        const handleTick = () => {
-          const nextTickAt = random(minDelay, maxDelay);
-          timeoutId.current = window.setTimeout(() => {
-            savedCallback.current();
-            handleTick();
-          }, nextTickAt);
-        };
-        handleTick();
-      }
-      
       return () => window.clearTimeout(timeoutId.current);
     }, [minDelay, maxDelay]);
   
